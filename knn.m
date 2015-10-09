@@ -38,3 +38,5 @@ for iCount = 1:size( test_data, 2)
     [~, index] = sort(loss);
     pred_label(iCount) = mode( train_label_2( index(1: 7)));
 end
+
+err = length(find((train_label_2 - pred_label)~=0))
